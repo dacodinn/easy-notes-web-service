@@ -1,0 +1,47 @@
+<!DOCTYPE html><!-- объявляем тип документа -->
+<html lang="ru"><!-- указываем язык страницы -->
+<head><!-- открываем секцию заголовка -->
+<meta charset="UTF-8"><!-- задаем кодировку -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><!-- делаем страницу адаптивной -->
+<title>easy notes! веб-сервис</title><!-- устанавливаем название вкладки -->
+<link rel="stylesheet" href="styles.css"><!-- подключаем стили -->
+<link rel="preconnect" href="https://fonts.googleapis.com"><!-- подготавливаем соединение с шрифтами -->
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><!-- ускоряем загрузку шрифта -->
+<link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet"><!-- подключаем моноширинный шрифт -->
+</head><!-- закрываем секцию заголовка -->
+<body><!-- открываем тело страницы -->
+<div class="browser-chrome"><!-- рисуем верхнюю панель браузера -->
+<div class="window-controls"><!-- контейнер для кнопок окна -->
+<span class="dot red"></span><!-- красная кнопка -->
+<span class="dot yellow"></span><!-- желтая кнопка -->
+<span class="dot green"></span><!-- зеленая кнопка -->
+</div><!-- закрываем контейнер кнопок -->
+<span class="tab-label">notes for life</span><!-- подпись вкладки -->
+</div><!-- закрываем верхнюю панель браузера -->
+<main class="app-window"><!-- основной контейнер приложения -->
+<header class="app-header"><!-- шапка приложения -->
+<div class="logo-border"><!-- рамка для логотипа -->
+<h1 class="logo-text">easy notes</h1><!-- текст логотипа -->
+</div><!-- закрываем рамку логотипа -->
+<p class="tagline">минималистичный блокнот для быстрых идей</p><!-- слоган -->
+</header><!-- закрываем шапку -->
+<section class="note-creator"><!-- область создания заметки -->
+<label class="field date-field"><!-- контейнер даты -->
+<span class="field-label">дата</span><!-- подпись поля даты -->
+<input type="date" id="note-date"><!-- поле выбора даты -->
+</label><!-- закрываем контейнер даты -->
+<label class="field text-field"><!-- контейнер текста -->
+<span class="field-label">текст заметки</span><!-- подпись поля текста -->
+<input type="text" id="note-text" placeholder="что записать?"><!-- поле ввода текста -->
+</label><!-- закрываем контейнер текста -->
+<button id="add-note">+</button><!-- кнопка добавления -->
+</section><!-- закрываем область создания -->
+<section class="notes-wrapper"><!-- контейнер списка заметок -->
+<div class="notes-label">list</div><!-- вертикальная подпись списка -->
+<ul class="notes-list" id="notes-list"><!-- список заметок -->
+</ul><!-- закрываем список -->
+</section><!-- закрываем контейнер списка -->
+</main><!-- закрываем основное окно -->
+<script src="script.js"></script><!-- подключаем скрипт -->
+</body><!-- закрываем тело -->
+</html><!-- закрываем html -->

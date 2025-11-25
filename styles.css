@@ -1,0 +1,217 @@
+:root{/* объявляем корневые переменные */
+  --bg:#0c0d0f;/* основной фон */
+  --panel:#15171b;/* фон панелей */
+  --border:#525866;/* цвет границ */
+  --accent:#55ff99;/* кислотный акцент */
+  --text:#e5f2ff;/* основной текст */
+  --muted:#7b8091;/* приглушенный текст */
+}/* закрываем root */
+*{/* сбрасываем стили */
+  box-sizing:border-box;/* включаем границы в расчет */
+  margin:0;/* убираем внешние отступы */
+  padding:0;/* убираем внутренние отступы */
+}/* конец универсального правила */
+body{/* стилизуем тело */
+  font-family:'Share Tech Mono','Lucida Console','Courier New',monospace;/* задаем терминальный шрифт */
+  background:var(--bg);/* фон страницы */
+  color:var(--text);/* основной цвет текста */
+  min-height:100vh;/* растягиваем на весь экран */
+  display:flex;/* включаем флекс */
+  flex-direction:column;/* располагаем элементы столбцом */
+  align-items:center;/* центрируем по вертикали */
+  justify-content:center;/* центрируем по горизонтали и вертикали */
+  padding:2rem;/* добавляем поля */
+  gap:0;/* убираем разрыв между панелью и окном */
+}/* конец тела */
+.browser-chrome{/* верхняя панель браузера */
+  width:900px;/* фиксируем ширину */
+  background:#1f2025;/* задаем фон */
+  border:2px solid var(--border);/* рисуем рамку */
+  border-bottom:none;/* убираем нижнюю границу */
+  padding:0.6rem 1rem;/* внутренний отступ */
+  display:flex;/* располагаем элементы в ряд */
+  align-items:center;/* выравниваем по центру */
+  gap:0.8rem;/* расстояние между элементами */
+  border-radius:8px 8px 0 0;/* скругляем верх */
+  box-shadow:0 10px 30px rgba(0,0,0,0.6);/* добавляем тень */
+}/* конец панели */
+.window-controls{/* контейнер кнопок */
+  display:flex;/* включаем флекс */
+  gap:0.4rem;/* промежуток между кружками */
+}/* конец контейнера */
+.dot{/* базовый стиль кружка */
+  width:12px;/* ширина */
+  height:12px;/* высота */
+  border-radius:50%;/* делаем круг */
+  display:block;/* показываем как блок */
+  border:1px solid #000;/* темная окантовка */
+}/* конец точки */
+.dot.red{/* красный кружок */
+  background:#ff5f56;/* устанавливаем цвет */
+}/* конец красного */
+.dot.yellow{/* желтый кружок */
+  background:#ffbd2e;/* устанавливаем цвет */
+}/* конец желтого */
+.dot.green{/* зеленый кружок */
+  background:#27c93f;/* устанавливаем цвет */
+}/* конец зеленого */
+.tab-label{/* подпись вкладки */
+  color:var(--muted);/* приглушенный цвет */
+  letter-spacing:0.2em;/* расстояние между символами */
+  text-transform:uppercase;/* делаем капс */
+  font-size:0.85rem;/* уменьшаем шрифт */
+}/* конец подписи */
+.app-window{/* окно приложения */
+  width:900px;/* ширина совпадает с панелью */
+  background:var(--panel);/* фон */
+  border:2px solid var(--border);/* рамка */
+  border-top:none;/* убираем верх */
+  border-radius:0 0 12px 12px;/* скругляем низ */
+  padding:2rem 2.5rem 2.5rem;/* внутренние отступы */
+  box-shadow:0 20px 40px rgba(0,0,0,0.6);/* глубокая тень */
+}/* конец окна */
+.app-header{/* шапка */
+  text-align:center;/* центрируем содержимое */
+  margin-bottom:2rem;/* добавляем отступ снизу */
+}/* конец шапки */
+.logo-border{/* рамка логотипа */
+  border:3px double var(--border);/* двойная линия */
+  padding:0.8rem 1.2rem;/* внутренний отступ */
+  display:inline-block;/* отображаем как блок */
+  text-transform:uppercase;/* капс */
+  letter-spacing:0.4em;/* увеличиваем межбуквенный интервал */
+}/* конец рамки */
+.logo-text{/* текст логотипа */
+  font-size:2rem;/* увеличиваем размер */
+  color:var(--accent);/* делаем зеленым */
+}/* конец текста */
+.tagline{/* слоган */
+  margin-top:0.9rem;/* отступ сверху */
+  color:var(--muted);/* приглушаем цвет */
+  letter-spacing:0.15em;/* добавляем техно стиль */
+}/* конец слогана */
+.note-creator{/* блок создания заметок */
+  display:grid;/* используем сетку */
+  grid-template-columns:180px 1fr 60px;/* задаем ширины столбцов */
+  gap:1rem;/* расстояние между элементами */
+  margin-bottom:2rem;/* отступ снизу */
+  align-items:end;/* выравниваем по нижнему краю */
+}/* конец блока */
+.field{/* общий контейнер поля */
+  display:flex;/* используем флекс */
+  flex-direction:column;/* располагаем вертикально */
+  gap:0.4rem;/* расстояние между подписью и полем */
+}/* конец контейнера */
+.field-label{/* подпись поля */
+  font-size:0.85rem;/* уменьшаем размер */
+  color:var(--muted);/* приглушаем цвет */
+  letter-spacing:0.2em;/* делаем техно стиль */
+}/* конец подписи */
+.field input{/* общее поле */
+  background:#0b0c0f;/* темный фон */
+  border:2px solid var(--border);/* граница */
+  border-radius:6px;/* легкое скругление */
+  padding:0.9rem;/* внутренний отступ */
+  color:var(--text);/* цвет текста */
+  font-size:1rem;/* размер шрифта */
+  letter-spacing:0.05em;/* небольшой интервал */
+}/* конец поля */
+.field input:focus{/* состояние фокуса */
+  outline:none;/* убираем стандартный контур */
+  border-color:var(--accent);/* подсвечиваем границу */
+  box-shadow:0 0 10px rgba(85,255,153,0.3);/* светится */
+}/* конец фокуса */
+#add-note{/* кнопка добавления */
+  height:100%;/* растягиваем */
+  border:2px solid var(--accent);/* рамка */
+  background:transparent;/* прозрачный фон */
+  color:var(--accent);/* зеленый текст */
+  font-size:2rem;/* крупный знак */
+  border-radius:10px;/* скругляем углы */
+  cursor:pointer;/* курсор руки */
+  transition:background 0.2s,color 0.2s;/* анимация */
+}/* конец кнопки */
+#add-note:hover{/* ховер кнопки */
+  background:var(--accent);/* заливаем */
+  color:#0b0c0f;/* темный текст */
+}/* конец ховера */
+.notes-wrapper{/* контейнер списка */
+  border:2px solid var(--border);/* рамка */
+  border-radius:12px;/* скругляем */
+  padding:1.5rem;/* отступы */
+  position:relative;/* для позиционирования подписи */
+}/* конец контейнера */
+.notes-label{/* вертикальный текст */
+  position:absolute;/* абсолютное позиционирование */
+  left:-2.5rem;/* выносим влево */
+  top:50%;/* по центру */
+  transform:rotate(-90deg) translateY(-50%);/* поворачиваем */
+  transform-origin:left top;/* точка вращения */
+  letter-spacing:0.5em;/* растягиваем буквы */
+  text-transform:uppercase;/* капс */
+  color:var(--border);/* серый цвет */
+}/* конец подписи */
+.notes-list{/* список заметок */
+  list-style:none;/* убираем маркеры */
+  display:flex;/* включаем флекс */
+  flex-direction:column;/* размещаем по колонке */
+  gap:1rem;/* отступ между карточками */
+}/* конец списка */
+.note-card{/* отдельная заметка */
+  border:2px solid var(--border);/* рамка */
+  border-radius:10px;/* скругление */
+  padding:1rem;/* отступы */
+  display:flex;/* флекс контейнер */
+  gap:1.4rem;/* расстояние между колонками */
+  background:#0f1116;/* фон карточки */
+  align-items:center;/* выравниваем содержимое по центру */
+}/* конец карточки */
+.note-date{/* блок даты */
+  min-width:120px;/* фиксируем ширину */
+  border-right:2px solid var(--border);/* разделительная линия */
+  padding-right:1rem;/* отступ справа */
+  font-weight:bold;/* подчеркиваем дату */
+  letter-spacing:0.1em;/* интервал */
+  color:var(--accent);/* зеленый цвет */
+}/* конец даты */
+.note-text{/* текст заметки */
+  flex:1;/* заполняем пространство */
+  letter-spacing:0.05em;/* легкий интервал */
+  line-height:1.4;/* высота строки */
+}/* конец текста */
+.delete-note{/* кнопка удаления */
+  border:2px solid var(--border);/* рамка */
+  background:transparent;/* прозрачный фон */
+  color:var(--muted);/* приглушенный цвет */
+  padding:0.2rem 0.6rem;/* отступы */
+  border-radius:6px;/* скругляем углы */
+  cursor:pointer;/* меняем курсор */
+  font-size:1rem;/* размер текста */
+  transition:color 0.2s, border-color 0.2s;/* плавные изменения */
+}/* конец кнопки удаления */
+.delete-note:hover{/* состояние наведения */
+  color:var(--accent);/* подсвечиваем цвет */
+  border-color:var(--accent);/* меняем границу */
+}/* конец ховера */
+.empty-state{/* сообщение об отсутствии */
+  text-align:center;/* центрируем текст */
+  color:var(--muted);/* приглушенный цвет */
+  letter-spacing:0.2em;/* интервал */
+}/* конец состояния */
+@media (max-width:960px){/* медиазапрос */
+  body{/* тело внутри медиазапроса */
+    padding:1rem;/* уменьшаем отступы */
+  }/* конец тела */
+  .browser-chrome,.app-window{/* оба контейнера */
+    width:100%;/* растягиваем на всю ширину */
+  }/* конец контейнеров */
+  .note-creator{/* блок создания */
+    grid-template-columns:1fr;/* одна колонка */
+  }/* конец блока */
+  #add-note{/* кнопка */
+    width:100%;/* растягиваем */
+  }/* конец кнопки */
+  .notes-label{/* подпись */
+    display:none;/* скрываем */
+  }/* конец подписи */
+}/* конец медиазапроса */
